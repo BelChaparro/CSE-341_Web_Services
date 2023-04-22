@@ -1,11 +1,8 @@
 // Express Web Server:
-const express = require('express');
+const express = require("express");
 const app = express();
-const lesson1Controller = require("./controllers/lesson1");
 
-app.get('/', lesson1Controller.antuanRoute);
-
-app.get('/fer', lesson1Controller.ferRoute);
+app.use("/", require("./routes"));
 
 const port = 3000;
 
